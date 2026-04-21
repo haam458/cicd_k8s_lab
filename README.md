@@ -1,6 +1,6 @@
-#CI/CD ja Kubernetes Labor
+# CI/CD ja Kubernetes Labor
 
-##Eesmärk
+## Eesmärk
 
 - Luua GitHub Actions workflow-fail ja seadistada CI-pipeline
 - Leida ja parandad pipeline'ide vigu logide abil
@@ -8,7 +8,7 @@
 - Luua ja hallata Deployment'e ja Service'e
 - Testida self-healing ja rolling update toimimist
 
-##Kasutatud tehnoloogiad
+## Kasutatud tehnoloogiad
 
 - Git
 - Docker
