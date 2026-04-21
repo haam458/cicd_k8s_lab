@@ -19,3 +19,20 @@ jobs:
 
       - name: Validate Python syntax
         run: python -m py_compile app.py  # Kompileerib, ei käivita - leiab süntaksivead
+test:
+    needs: validate                # Jookseb AINULT kui validate läbib
+    runs-on: ubuntu-latest         # Iga job saab puhtalt uue VM'i
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'             # Vahemälustab pip pakette (kiirendab)
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # Flask + pytest
+
+      - name: Run tests
+        run: pytest test_app.py -v  # -v = verbose, näitab iga testi tulemust
