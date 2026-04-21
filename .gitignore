@@ -1,0 +1,5 @@
+echo "__pycache__/" > .gitignore   # Python kompileeritud failid (ei kuulu Git'i)
+echo "*.pyc" >> .gitignore         # Python bytecode failid
+echo "venv/" >> .gitignore         # Virtual environment (kui kasutad)
+.env
+*.log
